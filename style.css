@@ -1,117 +1,146 @@
-/* Reset de CSS para remover estilos padrões dos navegadores */
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset de CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Configurações de estilo gerais */
+/* Estilo geral */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
     color: #333;
-    background-color: #f4f4f9;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
-
-/* Estilo do cabeçalho e navegação */
-header {
+/* Seção de Introdução */
+#introducao {
+    position: relative;
     width: 100%;
-    padding: 1rem;
-    background-color: #333;
+    height: 100vh; /* Ocupa a altura total da tela */
+    background-image: url('images/pexels-cottonbro-5052875.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax */
     color: #fff;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2rem;
-    margin-top: 0.5rem;
-}
-
-nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ff6f61;
-}
-
-/* Seções do site */
-section {
-    width: 90%;
-    max-width: 800px;
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-section p {
-    margin-bottom: 1rem;
-    color: #555;
-}
-
-/* Estilo do formulário de contato */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-label {
-    font-weight: bold;
-    color: #333;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%;
-    resize: vertical;
-}
-
-button[type="submit"] {
-    padding: 0.8rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #ff6f61;
-}
-
-/* Rodapé */
-footer {
+    align-items: center;
     text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* Shape Divider - Ondulação na borda inferior */
+.custom-shape-divider-bottom-1731443743 {
+    position: absolute;
+    bottom: -1px; /* Para que a ondulação fique ligeiramente abaixo */
+    left: 0;
     width: 100%;
-    margin-top: 2rem;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+}
+
+.custom-shape-divider-bottom-1731443743 svg {
+    position: relative;
+    display: block;
+    width: calc(105% + 1.3px); /* Garantir que o SVG cubra toda a largura */
+    height: 150px; /* Altura da ondulação */
+}
+
+.custom-shape-divider-bottom-1731443743 .shape-fill {
+    fill: #fbf6f3; /* Cor do fundo */
+}
+
+/* Conteúdo da Introdução */
+.introducao-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.introducao-content h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.introducao-content p {
+    font-size: 1.2rem;
+    color: #fff;
+    max-width: 80%;
+    margin: 0 auto;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Seção de Objetivo */
+#meu-objetivo {
+    background-color: #fff; /* Fundo branco */
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh; /* Ajusta a altura da seção para 75% da altura da tela */
+    position: relative;
+    z-index: 1; /* Garante que a seção fique acima da imagem anterior */
+}
+
+.objetivo-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.objetivo-title {
+    flex: 1;
+    padding-top: 2rem;
+    position: relative; /* Para permitir o posicionamento da linha abaixo */
+}
+
+.objetivo-title h2 {
+    font-size: 4rem;
+    color: #333;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+    text-align: left;
+    position: relative;
+}
+
+.objetivo-title h2::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    background-color: #333; /* Cor da linha */
+    margin-top: 1rem; /* Espaço entre o título e a linha */
+}
+
+.objetivo-text {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 3rem;
+    margin-top: 6rem;
+}
+
+.objetivo-text p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    max-width: 600px;
 }
