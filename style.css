@@ -97,26 +97,26 @@ body {
     width: 100%;
 }
 
-/* Container do Objetivo */
 .objetivo-container {
     max-width: 1200px;
     display: flex;
-    flex-direction: column; /* Mudando para coluna em dispositivos menores */
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    flex-direction: row;
     padding: 2rem 1rem;
-    gap: 2rem; /* Espaçamento entre título e texto */
+    
 }
 
-/* Título do Objetivo */
 .objetivo-title {
     flex: 1;
+    align-self: flex-start; /* Alinha ao topo do container */
     padding-top: -1rem; /* Ajuste do espaçamento */
+    margin-right: 2rem;
 }
 
 .objetivo-title h2 {
-    font-size: 2.5rem; /* Tamanho de fonte ajustado */
+    font-size: 2.5rem; /* Tamanho de fonte reduzido */
     font-weight: 600;
     color: #333;
     margin-bottom: 1rem;
@@ -133,7 +133,6 @@ body {
     margin-top: 0.5rem;
 }
 
-/* Texto do Objetivo */
 .objetivo-text {
     flex: 2;
     display: flex;
@@ -142,7 +141,7 @@ body {
 }
 
 .objetivo-text p {
-    font-size: 1rem; /* Fonte ajustada */
+    font-size: 1rem; /* Fonte reduzida */
     line-height: 1.6;
     max-width: 600px;
     color: #555;
@@ -216,4 +215,110 @@ body.scrolled header {
     .objetivo-text p {
         font-size: 0.9rem; /* Ajuste de tamanho da fonte */
     }
+}
+
+
+/* Seção de Etapa 1 */
+#etapa-1 {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Manter altura similar à introdução */
+    background-image: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.4), /* Gradiente escuro transparente no topo */
+            rgba(0, 0, 0, 0.7) /* Gradiente mais escuro no centro */
+        ),
+        url('images/pexels-cottonbro-5052875.jpg'); /* Sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: #fff;
+    z-index: 1;
+    margin-bottom: -4px; /* Remove o espaço indesejado */
+}
+
+.etapa-container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: row;
+    padding: 2rem 1rem;
+}
+
+.etapa-title {
+    flex: 1;
+    align-self: flex-start; /* Alinha ao topo do container */
+    padding-top: -1rem; /* Ajuste do espaçamento */
+    margin-right: 2rem;
+}
+
+.etapa-title h2 {
+    font-size: 2.5rem; /* Tamanho de fonte reduzido */
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1; /* Garante que o título fique acima da linha azul */
+}
+
+.etapa-title h2::after {
+    content: "";
+    display: block;
+    width: 30%; /* Linha mais curta */
+    height: 2px;
+    background-color: #007BFF; /* Cor de destaque */
+    position: absolute;
+    bottom: -0.5rem; /* Ajusta a posição da linha para ficar abaixo do título */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a linha em relação ao título */
+}
+
+
+.etapa-content {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.etapa-content h3 {
+    font-size: 3rem; /* Tamanho da fonte maior */
+    font-weight: 700;
+    color: #8e7a58; /* Cor dourada para destaque */
+    margin-bottom: 1rem;
+}
+
+.etapa-content p {
+    font-size: 1rem; /* Fonte reduzida */
+    line-height: 1.6;
+    max-width: 600px;
+    color: #ffffff;
+}
+
+/* Shape Dividers */
+
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: -9px; /* Coloca o shape um pouco acima para esconder o espaço */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.custom-shape-divider-bottom svg {
+    width: 100%;
+    height: 100px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+    fill: #fff;
 }
