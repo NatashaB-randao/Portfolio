@@ -1,5 +1,6 @@
 /* Importando fontes */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 /* Reset de CSS */
 * {
@@ -10,137 +11,209 @@
 
 /* Estilo geral */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #fafafa;
+    font-family: 'Prata'; /* Usando fonte mais limpa e sofisticada */
+    background-color: #f4f4f4;
     color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    line-height: 1.6;
 }
 
-/* Seção de Introdução */
 #introducao {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupa a altura total da tela */
-    background-image: url('images/pexels-cottonbro-5052875.jpg');
+    height: 90vh; /* Mantém altura reduzida */
+    background-image: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.4), /* Gradiente escuro transparente no topo */
+            rgba(0, 0, 0, 0.7) /* Gradiente mais escuro no centro */
+        ),
+        url('images/pexels-cottonbro-5052875.jpg'); /* Sua imagem */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efeito Parallax */
-    color: #fff;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
+    color: #fff;
     z-index: 1;
+    margin-bottom: -4px; /* Remove o espaço indesejado */
 }
 
-/* Shape Divider - Ondulação na borda inferior */
-.custom-shape-divider-bottom-1731443743 {
-    position: absolute;
-    bottom: -1px; /* Para que a ondulação fique ligeiramente abaixo */
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    z-index: 2;
-}
 
-.custom-shape-divider-bottom-1731443743 svg {
-    position: relative;
-    display: block;
-    width: calc(105% + 1.3px); /* Garantir que o SVG cubra toda a largura */
-    height: 150px; /* Altura da ondulação */
-}
-
-.custom-shape-divider-bottom-1731443743 .shape-fill {
-    fill: #fbf6f3; /* Cor do fundo */
-}
-
-/* Conteúdo da Introdução */
 .introducao-content {
-    position: relative;
+    max-width: 700px;
+    padding: 1.5rem;
     z-index: 2;
-    max-width: 800px;
-    padding: 2rem;
 }
 
 .introducao-content h2 {
-    font-size: 2.5rem;
-    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     letter-spacing: 1px;
-    font-weight: 700;
+    color: #8e7a58;
 }
 
 .introducao-content p {
-    font-size: 1.2rem;
-    color: #fff;
-    max-width: 80%;
+    font-size: 1.1rem;
     margin: 0 auto;
-    font-weight: 400;
     line-height: 1.6;
+    max-width: 80%;
+    font-weight: 400;
+}
+
+/* Shape Divider */
+.custom-shape-divider-bottom-1731443743 {
+    position: absolute;
+    bottom: -9px; /* Coloca o shape um pouco acima para esconder o espaço */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.custom-shape-divider-bottom-1731443743 svg {
+    width: 100%;
+    height: 100px; /* Reduzido para acompanhar a nova altura */
+}
+
+.custom-shape-divider-bottom-1731443743 .shape-fill {
+    fill: #fff;
 }
 
 /* Seção de Objetivo */
 #meu-objetivo {
-    background-color: #fff; /* Fundo branco */
-    padding: 4rem 2rem;
+    background-color: #fff; /* Fundo branco para combinar com a introdução */
+    padding: 4rem 2rem; /* Ajuste do padding para menor espaçamento */
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 75vh; /* Ajusta a altura da seção para 75% da altura da tela */
+    align-items: flex-start; /* Alinhamento ao topo */
+    height: auto; /* Altura automática para se adaptar ao conteúdo */
     position: relative;
-    z-index: 1; /* Garante que a seção fique acima da imagem anterior */
-}
-
-.objetivo-container {
-    display: flex;
     width: 100%;
-    max-width: 1200px;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
+/* Container do Objetivo */
+.objetivo-container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column; /* Mudando para coluna em dispositivos menores */
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem 1rem;
+    gap: 2rem; /* Espaçamento entre título e texto */
+}
+
+/* Título do Objetivo */
 .objetivo-title {
     flex: 1;
-    padding-top: 2rem;
-    position: relative; /* Para permitir o posicionamento da linha abaixo */
+    padding-top: -1rem; /* Ajuste do espaçamento */
 }
 
 .objetivo-title h2 {
-    font-size: 4rem;
+    font-size: 2.5rem; /* Tamanho de fonte ajustado */
+    font-weight: 600;
     color: #333;
-    font-weight: 700;
-    margin: 0;
-    letter-spacing: 2px;
-    text-align: left;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
     position: relative;
 }
 
 .objetivo-title h2::after {
     content: "";
     display: block;
-    width: 50%;
-    height: 3px;
-    background-color: #333; /* Cor da linha */
-    margin-top: 1rem; /* Espaço entre o título e a linha */
+    width: 30%; /* Linha mais curta */
+    height: 2px;
+    background-color: #007BFF; /* Cor de destaque */
+    margin-top: 0.5rem;
 }
 
+/* Texto do Objetivo */
 .objetivo-text {
-    flex: 1;
+    flex: 2;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-right: 3rem;
-    margin-top: 6rem;
 }
 
 .objetivo-text p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.8;
+    font-size: 1rem; /* Fonte ajustada */
+    line-height: 1.6;
     max-width: 600px;
+    color: #555;
+}
+
+/* Estilo do Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+body.scrolled header {
+    background-color: #fff;
+}
+
+/* Animações e efeitos */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .objetivo-container {
+        flex-direction: column; /* Colocar título e texto em coluna em telas menores */
+    }
+
+    .objetivo-title h2 {
+        font-size: 2rem; /* Tamanho menor do título */
+    }
+
+    .objetivo-text p {
+        font-size: 0.9rem; /* Ajuste de tamanho da fonte */
+    }
 }
