@@ -385,3 +385,133 @@ button.next {
 button.prev:hover, button.next:hover {
     color: #007bff;
 }
+
+
+
+/* Seção de Serviços */
+#servicos {
+    background-color: #fff; /* Fundo branco para manter a consistência */
+    padding: 4rem 2rem; /* Ajuste do padding para um bom espaçamento */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha ao topo da seção */
+    height: auto; /* Altura automática para se adaptar ao conteúdo */
+    width: 100%;
+}
+
+/* Container da seção */
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem 1rem;
+    flex-direction: row;
+}
+
+/* Título da seção */
+.titulo {
+    flex: 1; /* O título ocupa uma parte do espaço */
+    align-self: flex-start; /* Alinha o título ao topo */
+    padding-top: -1rem; /* Ajuste no padding */
+    margin-right: 2rem;
+}
+
+.titulo h2 {
+    font-size: 2.5rem; /* Tamanho da fonte ajustado */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.titulo h2::after {
+    content: "";
+    display: block;
+    width: 30%; /* Linha grifada curta */
+    height: 2px;
+    background-color: #007BFF; /* Cor da linha */
+    margin-top: 0.5rem;
+}
+
+/* Tipos de serviços */
+.tipos-servicos {
+    flex: 2; /* Os serviços ocupam o dobro do espaço */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Cada serviço individual */
+.servico {
+    display: flex; /* Usando flexbox para alinhar a imagem e o texto */
+    align-items: center; /* Alinha verticalmente a imagem e o texto */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff; /* Fundo branco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo da imagem (ícone) */
+.servico img {
+    width: 60px; /* Tamanho da imagem */
+    height: 60px; /* Tamanho fixo */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+/* Estilo do título do serviço */
+.servico h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Estilo do texto do serviço */
+.servico p {
+    font-size: 1.0em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Estilo do texto em negrito */
+.servico p strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .titulo {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .tipos-servicos {
+        width: 100%;
+    }
+
+    .servico {
+        flex-direction: column; /* Para dispositivos móveis, a imagem vai ficar acima do texto */
+        text-align: center; /* Alinha o texto no centro */
+    }
+
+    .servico img {
+        margin-bottom: 15px; /* Espaço entre a imagem e o texto em dispositivos móveis */
+    }
+
+    .servico h3 {
+        font-size: 1.5em;
+    }
+
+    .servico p {
+        font-size: 1em;
+    }
+}
