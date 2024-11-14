@@ -361,51 +361,27 @@ body.scrolled header {
     margin: 0 auto; /* Centraliza o texto */
 }
 
-/* Controles do Carrossel (setas) */
-.carrossel-container::before, .carrossel-container::after {
-    content: '';
+/* Estilo das setas do carrossel */
+button.prev, button.next {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    cursor: pointer;
-    z-index: 2;
-    font-size: 1.5rem; /* Ajuste do tamanho das setas */
+    z-index: 1000;
 }
 
-.carrossel-container::before {
+button.prev {
     left: 10px;
-    content: '<'; /* Símbolo para seta esquerda */
 }
 
-.carrossel-container::after {
+button.next {
     right: 10px;
-    content: '>'; /* Símbolo para seta direita */
 }
 
-/* Função de deslizar no carrossel */
-.carrossel-container:hover::before {
-    opacity: 1;
-}
-
-.carrossel-container:hover::after {
-    opacity: 1;
-}
-
-/* Responsividade para Carrossel */
-@media (max-width: 768px) {
-    .carrossel-item h3 {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
-    }
-
-    .carrossel-item p {
-        font-size: 0.9rem; /* Reduz o tamanho da fonte do texto */
-    }
+button.prev:hover, button.next:hover {
+    color: #007bff;
 }

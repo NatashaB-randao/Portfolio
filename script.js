@@ -16,31 +16,34 @@ window.addEventListener('scroll', checkVisibility);
 checkVisibility();
 
 
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        document.body.classList.add('scrolled');
-    } else {
-        document.body.classList.remove('scrolled');
-    }
-});
+document.addEventListener("DOMContentLoaded", function () {
+    // Pegando os elementos das setas
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+    const carousel = document.querySelector(".carrossel");
+    const items = document.querySelectorAll(".carrossel-item");
 
-let currentIndex = 0;
+    let index = 0; // Índice inicial
 
-function moveCarrossel(direction) {
-    const items = document.querySelectorAll('.carrossel-item');
-    const totalItems = items.length;
-
-    currentIndex += direction;
-
-    if (currentIndex < 0) {
-        currentIndex = totalItems - 1;
-    } else if (currentIndex >= totalItems) {
-        currentIndex = 0;
+    // Função para mostrar o item atual do carrossel
+    function showItem() {
+        items.forEach((item, i) => {
+            item.style.display = i === index ? "block" : "none";
+        });
     }
 
-    const offset = -currentIndex * 100;
-    items.forEach(item => {
-        item.style.transform = `translateX(${offset}%)`;
+    // Botão para ir para o próximo item
+    nextButton.addEventListener("click", function () {
+        index = (index + 1) % items.length; // Incrementa o índice (com loop)
+        showItem();
     });
-}
+
+    // Botão para voltar ao item anterior
+    prevButton.addEventListener("click", function () {
+        index = (index - 1 + items.length) % items.length; // Decrementa o índice (com loop)
+        showItem();
+    });
+
+    // Exibe o primeiro item ao carregar a página
+    showItem();
+});
