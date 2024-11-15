@@ -9,18 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Natasha's Portfolio</h1>
+    
+<!-- Cabeçalho -->
+<header>
+    <div class="header-content">
+        <div class="name-container">
+            <h1>Natasha Brandão</h1>
+            <h2>Desenvolvimento Web</h2>
+        </div>
         <nav>
             <ul>
-                <li><a href="#home">Início</a></li>
+                <li><a href="#home">Serviços</a></li>
+                <li><a href="#etapas">Etapas</a></li>
                 <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
+
 
 <!-- Seção de Introdução -->
 <section id="introducao">
@@ -124,12 +130,16 @@
 
 <!-- Seção Quem Sou Eu -->
 <section id="quem-sou-eu">
-    <div class="quem-sou-eu-content">
-        <h2>Quem sou eu?</h2>
-        <h3>Quem é a desenvolvedora?</h3>
-        <p>
-            Olá! Sou uma desenvolvedora apaixonada por criar soluções digitais que transformam ideias em realidade. Com foco em design elegante e funcionalidade impecável, estou pronta para ajudar você a alcançar seus objetivos online.
-        </p>
+    <div class="quem-sou-eu-container">
+        <div class="quem-sou-eu-foto">
+            <img src="images\me.png" alt="Foto da desenvolvedora">
+        </div>
+        <div class="quem-sou-eu-content">
+            <h2>Quem sou eu?</h2>
+            <p>
+                Olá! Sou uma desenvolvedora apaixonada por criar soluções digitais que transformam ideias em realidade. Com foco em design elegante e funcionalidade impecável, estou pronta para ajudar você a alcançar seus objetivos online.
+            </p>
+        </div>
     </div>
     <div class="custom-shape-divider-bottom-quem-sou-eu">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -140,7 +150,9 @@
 
 
 
-    <!-- Seção de Portfólio -->
+
+<!--
+    Seção de Portfólio
     <section id="portfolio">
         <h2>Meus Projetos</h2>
         <div class="portfolio-item">
@@ -157,12 +169,11 @@
         </div>
     </section>
 
-    <!-- Seção de Contato -->
+    Seção de Contato
     <section id="contato">
         <h2>Contato</h2>
         <p>Entre em contato comigo através do formulário abaixo ou pelas redes sociais</p>
-        <!-- Formulário de contato -->
-        <form>
+        Formulário de contato 
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
@@ -175,15 +186,12 @@
             <button type="submit">Enviar</button>
         </form>
     </section>
+-->
+
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Natasha. Todos os direitos reservados.</p>
-        <div class="social-media">
-            <a href="https://linkedin.com/in/seuperfil" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/seuperfil" target="_blank">GitHub</a> |
-            <a href="https://instagram.com/seuperfil" target="_blank">Instagram</a>
-        </div>
+        <p>&copy; 2024 Natasha Brandão. Todos os direitos reservados.</p>
     </footer>
 
     <!-- Link para o arquivo JavaScript -->

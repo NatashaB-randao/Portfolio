@@ -147,6 +147,7 @@ body {
     color: #555;
 }
 
+
 /* Estilo do Header */
 header {
     position: fixed;
@@ -160,17 +161,55 @@ header {
     transition: background-color 0.3s ease;
 }
 
-header h1 {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-nav ul {
+/* Estilo para o conteúdo do cabeçalho */
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Container para o nome e título */
+.name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    margin-left: 10%; /* Ajusta para a direita */
+    position: relative;
+}
+
+/* Estilo para o nome (h1) */
+header h1 {
+    font-family: 'Poppins';
+    color: #8b6f3e;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Estilo para o título (h2) */
+header h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin-top: 0.5rem; /* Adiciona espaço entre o nome e o título */
+    text-align:end; /* Centraliza o título abaixo do nome */
+    width: 100%; /* Faz o título ocupar toda a largura do container */
+}
+
+/* Estilo para o menu de navegação */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
 }
 
 nav a {
@@ -190,32 +229,39 @@ body.scrolled header {
     background-color: #fff;
 }
 
-/* Animações e efeitos */
-.section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsividade */
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
-    .objetivo-container {
-        flex-direction: column; /* Colocar título e texto em coluna em telas menores */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .objetivo-title h2 {
-        font-size: 2rem; /* Tamanho menor do título */
+    .name-container {
+        align-items: center;
+        margin-left: 0;
     }
 
-    .objetivo-text p {
-        font-size: 0.9rem; /* Ajuste de tamanho da fonte */
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 0.5rem 0;
     }
 }
+
+
 
 
 /* Seção de Etapas */
@@ -518,63 +564,74 @@ button.prev:hover, button.next:hover {
 
 
 
-/* Seção Quem Sou Eu */
 #quem-sou-eu {
     position: relative;
     width: 100%;
-    height: 90vh; /* Mantém altura semelhante à seção de introdução */
+    height: 90vh;
     background-image: 
         linear-gradient(
-            rgba(0, 0, 0, 0.4), /* Gradiente escuro transparente no topo */
-            rgba(0, 0, 0, 0.7) /* Gradiente mais escuro no centro */
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.7)
         ),
-        url('images/plans-1867745_1280.jpg'); /* Altere para a imagem desejada */
+        url('images/plans-1867745_1280.jpg'); /* Altere para sua imagem de fundo */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-direction: column;
+    text-align: left;
     color: #fff;
-    z-index: 1;
-    margin-bottom: -4px; /* Remove espaço indesejado */
+}
+
+.quem-sou-eu-container {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.quem-sou-eu-foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quem-sou-eu-foto img {
+    width: 300px; /* Ajuste o tamanho da foto */
+    height: 300px;
+    border-radius: 50%; /* Foto em formato circular */
+    border: 4px solid #ac8b53; /* Borda elegante */
+    object-fit: cover; /* Garante que a imagem se encaixe no círculo */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .quem-sou-eu-content {
-    max-width: 700px;
-    padding: 1.5rem;
-    z-index: 2;
+    flex: 2;
+    padding-left: 2rem; /* Ajuste para dar espaço entre a foto e o texto */
 }
 
 .quem-sou-eu-content h2 {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    letter-spacing: 1px;
-    color: #ac8b53; /* Cor similar à seção de introdução */
+    color: #ac8b53;
 }
 
-.quem-sou-eu-content h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #d4af7a; /* Tom complementar ao título principal */
-}
+
 
 .quem-sou-eu-content p {
     font-size: 1.2rem;
-    margin: 0 auto;
     line-height: 1.6;
-    max-width: 80%;
     font-weight: 400;
 }
 
 /* Shape Divider */
 .custom-shape-divider-bottom-quem-sou-eu {
     position: absolute;
-    bottom: -9px; /* Coloca o shape um pouco acima para esconder o espaço */
+    bottom: -9px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -582,7 +639,7 @@ button.prev:hover, button.next:hover {
 
 .custom-shape-divider-bottom-quem-sou-eu svg {
     width: 100%;
-    height: 100px; /* Ajuste para harmonizar com a altura */
+    height: 100px;
 }
 
 .custom-shape-divider-bottom-quem-sou-eu .shape-fill {
