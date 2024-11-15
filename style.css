@@ -235,7 +235,7 @@ header h1 {
 
 /* Estilo para o título (h2) */
 header h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     color: #333;
     font-size: 0.8rem;
     font-weight: 400;
@@ -438,7 +438,7 @@ nav .contact-button:hover {
 }
 
 .etapa-content h3 {
-    font-size: 1rem; 
+    font-size: 0.6rem; 
     font-weight: 700;
     color: #8e7a58; /* Cor dourada para destaque */
     margin-bottom: 1rem;
@@ -516,7 +516,7 @@ nav .contact-button:hover {
 }
 
 .carrossel-item h3 {
-    font-size: 3.5rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
     color: #ac8b53;
