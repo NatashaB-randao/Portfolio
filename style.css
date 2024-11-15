@@ -761,6 +761,28 @@ button.prev:hover, button.next:hover {
     fill: #fff;
 }
 
+.contact-button {
+    background-color: #000000; /* Cor de fundo */
+    color: white;              /* Cor do texto */
+    padding: 10px 20px;        /* Espaçamento dentro do botão */
+    text-decoration: none;     /* Retira o sublinhado */
+    border-radius: 5px;        /* Borda arredondada */
+    font-size: 16px;           /* Tamanho da fonte */
+    display: inline-block;     /* Exibe como botão */
+    margin-top: 10px;          /* Espaço acima do botão */
+}
+
+/* Alteração da cor ao passar o mouse */
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-button {
+        font-size: 14px;  /* Reduz o tamanho da fonte em dispositivos móveis */
+        padding: 8px 16px; /* Ajusta o padding para telas pequenas */
+    }
+}
 
 
 /* Ajustes gerais para telas pequenas */
