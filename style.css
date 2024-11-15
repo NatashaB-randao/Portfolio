@@ -464,14 +464,14 @@ button.prev:hover, button.next:hover {
 
 /* Estilo do título do serviço */
 .servico h3 {
-    font-size: 1.2em;
+    font-size: 2.2em;
     color: #333;
     margin-bottom: 15px;
 }
 
 /* Estilo do texto do serviço */
 .servico p {
-    font-size: 1.0em;
+    font-size: 1.2em;
     color: #555;
     line-height: 1.6;
 }
@@ -514,4 +514,54 @@ button.prev:hover, button.next:hover {
     .servico p {
         font-size: 1em;
     }
+}
+
+
+/* Seção Quem Sou Eu */
+#quem-sou-eu {
+    background-color: #fff; /* Fundo branco */
+    padding: 4rem 2rem; /* Espaçamento interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Altura ajustável */
+    width: 100%;
+}
+
+/* Container da seção */
+.quem-container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+/* Títulos da seção */
+.quem-texto h2 {
+    font-size: 2.5rem; /* Tamanho do título principal */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.quem-texto h3 {
+    font-size: 1.8rem; /* Tamanho do subtítulo */
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+/* Texto descritivo */
+.quem-texto p {
+    font-size: 1.2rem; /* Tamanho do texto */
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px; /* Largura máxima do texto */
+    margin-top: 1rem;
 }
