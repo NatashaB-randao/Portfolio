@@ -21,6 +21,11 @@ body {
     line-height: 1.6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 #introducao {
     position: relative;
     width: 100%;
@@ -184,7 +189,7 @@ header {
 header h1 {
     font-family: 'Poppins';
     color: #8b6f3e;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     font-weight: 700;
     letter-spacing: 2px;
     margin: 0;
@@ -222,12 +227,31 @@ nav a {
 }
 
 nav a:hover {
-    color: #007BFF;
+    color: #8b6f3e;
 }
 
 body.scrolled header {
     background-color: #fff;
 }
+
+/* Estilo do botão "Quero Ter um Projeto" */
+nav .contact-button {
+    background-color: #000000; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    padding: 0.5rem 1.5rem; /* Espaçamento interno */
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 20px; /* Bordas arredondadas */
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav .contact-button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumento suave do botão ao passar o mouse */
+}
+
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
