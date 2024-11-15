@@ -438,14 +438,14 @@ nav .contact-button:hover {
 }
 
 .etapa-content h3 {
-    font-size: 10.6rem; /* Tamanho da fonte maior */
+    font-size: 1rem; /* Tamanho da fonte maior */
     font-weight: 700;
     color: #8e7a58; /* Cor dourada para destaque */
     margin-bottom: 1rem;
 }
 
 .etapa-content p {
-    font-size: 5.5rem; /* Fonte reduzida */
+    font-size: 2.5rem; /* Fonte reduzida */
     line-height: 1.6;
     max-width: 600px;
     color: #ffffff;
@@ -627,7 +627,7 @@ button.prev:hover, button.next:hover {
 
 /* Estilo do título do serviço */
 .servico h3 {
-    font-size: 2.2em;
+    font-size: 2em;
     color: #333;
     margin-bottom: 15px;
 }
@@ -855,62 +855,32 @@ img {
 
 
 
-/* Estilos gerais para dispositivos móveis */
+/* Estilos para dispositivos móveis */
 @media screen and (max-width: 768px) {
-    /* Ajuste na seção de introdução */
-    #introducao {
+    /* Ajuste na seção de etapas */
+    #etapa-1,
+    #etapa-2,
+    #etapa-3 {  /* Adicione mais etapas se necessário */
         padding: 20px; /* Reduz o preenchimento */
         font-size: 14px; /* Diminui o tamanho da fonte */
     }
 
-    /* Ajuste na seção de objetivo */
-    #meu-objetivo {
-        padding: 20px;
-        font-size: 14px;
+    /* Ajuste do título das etapas */
+    .etapa-titulo {
+        font-size: 16px; /* Diminui o tamanho do título das etapas */
     }
 
-    /* Ajuste na seção de etapas */
-    #etapa-1 {
-        padding: 20px;
-        font-size: 14px;
+    /* Ajuste do texto dentro de cada etapa */
+    .etapa-texto {
+        font-size: 14px; /* Diminui o texto dentro das etapas */
     }
 
-    /* Ajustes adicionais, como o carrossel, se necessário */
+    /* Caso haja algum carrossel dentro da seção de etapas, você pode adicionar ajustes também */
     .carrossel-container {
         margin-top: 20px;
     }
 
     .carrossel-item {
         font-size: 12px; /* Reduz o tamanho da fonte dos itens no carrossel */
-    }
-
-    /* Ajuste do cabeçalho */
-    header .name-container h1 {
-        font-size: 20px; /* Diminui o tamanho do nome */
-    }
-
-    header .name-container h2 {
-        font-size: 14px; /* Diminui o subtítulo */
-    }
-
-    /* Ajuste dos itens do menu */
-    nav ul {
-        display: block;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 5px 0;
-    }
-
-    nav ul li a {
-        font-size: 14px; /* Diminui o tamanho do texto do menu */
-    }
-
-    /* Ajuste do botão de contato */
-    .contact-button {
-        font-size: 14px;
-        padding: 10px;
     }
 }
