@@ -19,6 +19,7 @@ body {
     align-items: center;
     overflow-x: hidden;
     line-height: 1.6;
+    overflow-x: hidden; /* Evita que o conteúdo transborde horizontalmente */
 }
 
 html {
@@ -676,6 +677,7 @@ button.prev:hover, button.next:hover {
 @media (max-width: 768px) {
     body {
         font-size: 14px; /* Reduz a fonte para telas menores */
+        overflow-x: hidden; /* Evita que o conteúdo transborde horizontalmente */
     }
 
     .introducao-content h2 {
@@ -713,7 +715,8 @@ button.prev:hover, button.next:hover {
     }
 
     .servico img {
-        width: 50%; /* Ajuste o tamanho das imagens para telas menores */
+        max-width: 100%; /* Faz com que a imagem nunca ultrapasse a largura do container */
+        height: auto;
     }
 
     .quem-sou-eu-container {
