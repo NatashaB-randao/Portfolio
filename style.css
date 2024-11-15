@@ -39,7 +39,7 @@ html {
         url('images/pexels-cottonbro-5052875.jpg'); /* Sua imagem */
     background-size: cover;
     background-position: center;
-    /*background-attachment: fixed; */
+    background-attachment: fixed; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -378,7 +378,7 @@ nav .contact-button:hover {
         url('images/pexels-ron-lach-9809814.jpg'); /* Sua imagem */
     background-size: cover;
     background-position: center;
-    /*background-attachment: fixed; */
+    background-attachment: fixed; 
     display: flex;
     justify-content: center;
     align-items: center;
