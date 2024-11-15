@@ -438,7 +438,7 @@ nav .contact-button:hover {
 }
 
 .etapa-content h3 {
-    font-size: 1rem; /* Tamanho da fonte maior */
+    font-size: 1rem; 
     font-weight: 700;
     color: #8e7a58; /* Cor dourada para destaque */
     margin-bottom: 1rem;
@@ -911,3 +911,41 @@ img {
         font-size: 12px; /* Reduz o tamanho da fonte dos itens no carrossel */
     }
 }
+
+/* Ajustes de responsividade para Header */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .name-container {
+        align-items: center;
+        margin-left: 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 0.5rem 0;
+    }
+
+    /* Escondendo os itens de navegação no dispositivo móvel */
+    nav {
+        display: none;
+    }
+}
+

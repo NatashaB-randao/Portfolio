@@ -47,3 +47,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Exibe o primeiro item ao carregar a página
     showItem();
 });
+
+
