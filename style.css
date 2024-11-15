@@ -671,6 +671,7 @@ button.prev:hover, button.next:hover {
 }
 
 
+
 /* Ajustes gerais para telas pequenas */
 @media (max-width: 768px) {
     body {
