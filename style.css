@@ -73,6 +73,25 @@ html {
     font-weight: 400;
 }
 
+/* Ajustes para a seção Introdução */
+@media (max-width: 768px) {
+    #introducao {
+        height: 80vh; /* Diminuir para melhorar a visualização */
+        padding: 1rem; /* Garantir que o conteúdo tenha um espaço extra */
+    }
+
+    .introducao-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .introducao-content p {
+        font-size: 1rem;
+        max-width: 90%; /* Ajusta para melhor visualização */
+    }
+}
+
+
 /* Shape Divider */
 .custom-shape-divider-bottom-1731443743 {
     position: absolute;
@@ -151,6 +170,27 @@ html {
     line-height: 1.6;
     max-width: 600px;
     color: #555;
+}
+
+/* Ajustes para a seção Meu Objetivo */
+@media (max-width: 768px) {
+    #meu-objetivo {
+        padding: 2rem 1rem; /* Diminuir o padding para mais espaço */
+    }
+
+    .objetivo-container {
+        flex-direction: column; /* Tornar as colunas em uma única coluna */
+        align-items: center;
+    }
+
+    .objetivo-title h2 {
+        font-size: 2rem; /* Reduzir o tamanho da fonte */
+    }
+
+    .objetivo-text p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
 }
 
 
@@ -234,6 +274,45 @@ nav a:hover {
 body.scrolled header {
     background-color: #fff;
 }
+
+/* Ajustes de responsividade para Header */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .name-container {
+        align-items: center;
+        margin-left: 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 0.5rem 0;
+    }
+
+    /* Ajustando o header para não sobrepor outros conteúdos */
+    header {
+        padding: 1rem;
+    }
+}
+
+
 
 /* Estilo do botão "Quero Ter um Projeto" */
 nav .contact-button {
@@ -393,6 +472,32 @@ nav .contact-button:hover {
 .custom-shape-divider-bottom .shape-fill {
     fill: #fff;
 }
+
+/* Ajustes para a seção Etapas */
+@media (max-width: 768px) {
+    #etapa-1 {
+        height: 80vh; /* Menor altura para ajustar em telas pequenas */
+    }
+
+    .etapa-container {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        padding: 2rem 1rem;
+    }
+
+    .etapa-title h2 {
+        font-size: 2rem;
+    }
+
+    .etapa-content h3 {
+        font-size: 4rem; /* Reduz o tamanho do título */
+    }
+
+    .etapa-content p {
+        font-size: 1.2rem; /* Reduz o tamanho do texto */
+        max-width: 90%; /* Ajuste da largura do texto */
+    }
+}
+
 
 /* Estilo do Carrossel */
 .carrossel-container {
@@ -645,8 +750,6 @@ button.prev:hover, button.next:hover {
     color: #ac8b53;
 }
 
-
-
 .quem-sou-eu-content p {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -754,3 +857,10 @@ button.prev:hover, button.next:hover {
     }
 }
 
+
+
+/* Imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
