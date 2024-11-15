@@ -470,21 +470,21 @@ nav .contact-button:hover {
     fill: #fff;
 }
 
-/* Ajustes para a seção Etapas */
+
+/* Ajustes para telas menores que 768px */
 @media (max-width: 768px) {
     #etapa-1 {
-        height: auto;
-    }
-
-    .etapa-container {
-        flex-direction: column;
+        height: 80vh; /* Ajustar altura para telas menores */
     }
 
     .etapa-title h2 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Reduzir o tamanho da fonte */
+    }
+
+    .etapa-content p {
+        font-size: 1rem; /* Reduzir o tamanho do texto */
     }
 }
-
 
 /* Estilo do Carrossel */
 .carrossel-container {
