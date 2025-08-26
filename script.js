@@ -1,5 +1,17 @@
 const sections = document.querySelectorAll('.section');
 
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+    const navList = document.getElementById("nav-list");
+
+    if (mobileMenuToggle && navList) {
+        mobileMenuToggle.addEventListener("click", function () {
+            navList.classList.toggle("active"); // Adicione uma classe 'active' para mostrar/esconder
+        });
+    }
+
+});
+
 const checkVisibility = () => {
     const windowHeight = window.innerHeight;
     sections.forEach(section => {
@@ -48,4 +60,14 @@ document.addEventListener("DOMContentLoaded", function () {
     showItem();
 });
 
+
+// Atualizar ano no rodapé
+document.addEventListener("DOMContentLoaded", function() {
+    const currentYearSpan = document.getElementById("current-year");
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+
+
+});
 

@@ -120,14 +120,20 @@ html {
 }
 
 .objetivo-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Título ocupa 1 parte, texto 2 partes */
+    gap: 2rem;
     max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     width: 100%;
-    flex-direction: row;
     padding: 2rem 1rem;
-    
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .objetivo-container {
+        grid-template-columns: 1fr; /* Em telas menores, uma coluna */
+        gap: 1rem;
+    }
 }
 
 .objetivo-title {
@@ -949,3 +955,32 @@ img {
     }
 }
 
+.projeto-link {
+    background-color: #007BFF; /* Ou sua cor de destaque */
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex; /* Para alinhar o ícone e o texto */
+    align-items: center;
+    gap: 0.5rem; /* Espaço entre ícone e texto */
+    transition: background-color 0.3s ease;
+}
+
+.projeto-link:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos base para a seção */
+.section { /* Ou as IDs das suas seções como #meu-objetivo */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estilos quando a seção está visível */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
